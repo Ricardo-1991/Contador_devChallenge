@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "homepage": "https://github.com/Ricardo-1991/Dev_Challenge.git",
     "gh-pages": "^3.2.3",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

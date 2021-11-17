@@ -5,7 +5,7 @@ import { Routes } from "react-router-dom"
 
 export default function MainRoutes () {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="/count" element={<Count/>}/> 
