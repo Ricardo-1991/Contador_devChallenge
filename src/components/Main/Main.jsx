@@ -13,10 +13,16 @@ export const Main = () => {
   }
 
   const handleSubmit = (data) => {
+
+    if(data === ''){
+      alert('Escolha uma data antes de prosseguir!')
+      return false
+    }
+
     let date = new Date()
     let userDate = new Date(data)
     userDate.setHours(userDate.getHours() + 3)
-  
+
     if(userDate.getTime() < date.getTime()){
       alert('Digite uma data futura para contabilizar')
     }else {
@@ -29,8 +35,8 @@ export const Main = () => {
     <div className={main.userMain}>
       <h1>Contador</h1>
       <h3>Informe uma data</h3>
-      <input type="date" name="input" value={data} onChange={handleDate}  />
-      <button onClick={ () => handleSubmit(data)}>Iniciar Contagem</button>
+      <input type="date" name="input" placeholder="Clique aqui e adicione uma data" value={data} onChange={handleDate} />
+      <button onClick={() => handleSubmit(data)}>Iniciar Contagem</button>
     </div>
   
 
